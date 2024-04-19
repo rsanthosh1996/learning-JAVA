@@ -1,3 +1,4 @@
+
 code
 
 \\ instance variable execute 
@@ -124,7 +125,52 @@ class cat {
 }
 
 
+///String class and methods 
+class demo {
+    public static void main(String args[])
+{
+    String str = new String("hello");
+    System.out.println(str);
+}
+}
+
+//concate method 
+class demo {
+    public static void main(String args[]) {
+        String str = new String("hello");
+        str = str.concat("welcome"); // Added semicolon here
+        System.out.println(str);
+    }
+}
+
+//length of string , indexOf
+
+class demo {
+    public static void main(String args[]) {
+        String str = new String("hello");
+        System.out.println(str);
+        System.out.println(str.length());
+        System.out.println(str.indexOf("h"));
+    }
+}
+
+//string buffer class
+in this class objects are muttable but in string class the object are not modifiable .
+
+class StringBufferExample {
+    public static void main(String args[]) {
+        StringBuffer str = new StringBuffer("welcome");
+        System.out.println(str);   
+        System.out.println(str.append("java"));
+        System.out .println(str.insert(4,"hi"));
+    }
+}
 
 
-
+//Overloading 
+constructor, method ,operator overloading.-------polymorphism(executing same in diff ways 
+-- in c not two functions will have same name.
+in java same name allowed in function with diff parameters.
+const overloading - defualt ,parametraized 
+operator -- + add or concatenation.
 
