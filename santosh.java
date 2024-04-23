@@ -174,7 +174,7 @@ in java same name allowed in function with diff parameters.
 const overloading - defualt ,parametraized 
 operator -- + add or concatenation.
 
- -- constructor overloading 
+-- constructor overloading 
 class demo {
     demo() {
         System.out.println("hello");
@@ -373,4 +373,113 @@ class child1 extends parent {
         System.out.println(obj2.c);
     }
 }
+
+// super keyword 
+to access methods,variables,constructor of immediate class .
+when same name of varibale menthod are there preference is given to derived class varibales ,methods when object is created. hence we use super keyword to access parent class 
+
+
+class parent{
+    int a = 10;
+    void display(){
+        System.out.println("hi");
+    }
+}
+
+class child extends parent{
+    int a =20;
+    void display(){
+        System.out.println("ji");
+        //System.out.println(a);
+        System.out.println(super.a);
+        super.display();
+    }
+}
+
+public class parentchild {
+    public static  void main(String args[]){
+        child obj = new child();
+        obj.display();
+    }
+}
+
+** super() is used to implicitly access child constructor first  than parent ones.
+
+///method  overriding .(return type 
+                         scope 
+                         parameters )
+
+using inheritance 
+name of method in parent and child class should be same 
+returntype , scope , parameters should be same .
+methods declared as final , static cant be override 
+
+using super keyword we can print display() since parent and child have same method (overiding) on immediate parent class 
+if super is not there only child method dispaly will be executed. or we can create object for parent to acess diaplay in parent class 
+
+now if parent class is declared final or static  then we cant override .
+
+
+
+class parent {
+    void display(){
+        System.out.println("hi");
+    }
+}
+class child extends parent{
+    void display(){
+        super.display();
+        System.out.println("yes");
+    }
+}
+
+public class lol{
+    public static void main(String args[]){
+        child obj =new child();
+        obj.display();
+        
+    }
+}
+
+output hi
+yes 
+
+
+////diff between methodoverloading and method over riding 
+
+PLOYMORPHISM
+implementing the same thing in diff ways 
+1- compile time polymorphism
+method overloading 
+static binding 
+
+2- run time polymorhism 
+mthod over riding 
+dynamic binding 
+
+
+over loading 
+1 compile time polymorphism 
+2 static binding 
+3 single class implementation
+4 no need of inheritance 
+5 method name should be same 
+6 diff in parameter
+7 diff in return type 
+8 static methods cant be overloaded
+9 early binding 
+
+
+over riding 
+1 run time polymorphism 
+2 dynamic binding 
+3 two classes
+4 inheritance needed
+5 method name same 
+6 parameter same 
+7 return type same  
+8 static mthod cant be over ride 
+9 late binding 
+10  final delcared cant be over ride 
+
 
